@@ -1,51 +1,4 @@
-
 <?php include("header.php"); ?>
-<section id="info-bar">
-	<div class="container p-2">
-		<span class="mr-5"><i class="fas fa-user mr-2"></i> Agent Login</span>
-		<span class="mr-5"><i class="fas fa-user mr-2"></i> Member Login</span>
-		<span class="mr-5"><i class="far fa-file mr-2"></i> Not a member? <a class="reg" href="#"> Register</a></span>
-		<span>Call Us Now :815-123-4567</span>
-		<a href="#" class="fab fa-facebook-f"></a>
-		<a href="#" class="fab fa-twitter"></a>
-		<a href="#" class="fab fa-tumblr"></a>
-		<a href="#" class="fab fa-pinterest"></a>
-	</div>
-</section>
-<section id="navbar">
-	<div class="container p-2">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand mr-5" href="#"> <img src="imgs/logo.png"> </a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link mr-5" href="#">home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link mr-5" href="#">destination</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link mr-5" href="#">cruises</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link mr-5" href="#">specials</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link mr-5" href="#">holidays</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link mr-5" href="#">blog</a>
-					</li>
-				</ul>
-				<i class="fas fa-search"></i>
-			</div>
-		</nav>
-	</div>
-</section>
 
 <section id="travel-live">
 	<div class="min-vh-100 container d-flex flex-column align-content-center">
@@ -59,11 +12,9 @@
 		</div>
 	</div>
 </section>
-
 <!-- <div class="find-place">
 <img id="form-bar" src="img/image-2.png"> </img>
 </div> -->
-
 <section id="form-bar" class="p-2">
 	<div class="d-flex justify-content-around">
 		<div class="container-fluid">
@@ -84,13 +35,11 @@
 	</div>
 </div>
 </section>
-
 <div class="offers" id="offers">
 	<div class="offers-head">
 		<h3>Special Offers</h3>
 		<p>Best 2014 packages where people love to stay!</p>
 	</div>
-
 	<script defer="" src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
 	$(function(){
@@ -333,91 +282,4 @@
 	</div>
 </div>
 
-<div class="footer">
-	<div class="wrap">
-		<div class="footer-grids">
-			<div class="footer-grid Newsletter">
-				<h3>News letter </h3>
-				<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
-				<form>
-					<input type="text" placeholder="Subscribes.."> <input type="submit" value="GO">
-				</form>
-			</div>
-			<div class="footer-grid Newsletter">
-				<h3>Latest News </h3>
-				<div class="news">
-					<div class="news-pic">
-						<img src="imgs/f01.jpg" title="news-pic1">
-					</div>
-					<div class="news-info">
-						<a href="#">Postformat Gallery: Multiple images</a>
-						<span>December 12, 2012 - 9:11 pm</span>
-					</div>
-					<div class="clear"> </div>
-				</div>
-				<div class="news">
-					<div class="news-pic">
-						<img src="imgs/f01.jpg" title="news-pic1">
-					</div>
-					<div class="news-info">
-						<a href="#">Postformat Gallery: Multiple images</a>
-						<span>December 12, 2012 - 9:11 pm</span>
-					</div>
-					<div class="clear"> </div>
-				</div>
-			</div>
-			<div class="footer-grid tags">
-				<h3>Tags</h3>
-				<ul>
-					<li><a href="#">Agent login</a></li>
-					<li><a href="#">Customer Login</a></li>
-					<li><a href="#">Not a Member?</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">New Horizons</a></li>
-					<li><a href="#">Landscape</a></li>
-					<li><a href="#">Tags</a></li>
-					<li><a href="#">Nice</a></li>
-					<li><a href="#">Some</a></li>
-					<li><a href="#">Portrait</a></li>
-					<div class="clear"> </div>
-				</ul>
-			</div>
-			<div class="footer-grid address">
-				<h3>Address </h3>
-				<div class="address-info">
-					<span>DieSachbearbeiter Schonhauser </span>
-					<span>Allee 167c,10435 Berlin Germany</span>
-					<span><i>E-mail:</i><a href="mailto:moin@blindtextgenerator.de">moin@blindtextgenerator.de</a></span>
-				</div>
-				<div class="footer-social-icons">
-					<ul>
-						<li><a class="face1 simptip-position-bottom simptip-movable" data-tooltip="facebook" href="#"><span> </span></a></li>
-						<li><a class="twit1 simptip-position-bottom simptip-movable" data-tooltip="twitter" href="#"><span> </span></a></li>
-						<li><a class="tub1 simptip-position-bottom simptip-movable" data-tooltip="tumblr" href="#"><span> </span></a></li>
-						<li><a class="pin1 simptip-position-bottom simptip-movable" data-tooltip="pinterest" href="#"><span> </span></a></li>
-						<div class="clear"> </div>
-					</ul>
-				</div>
-			</div>
-			<div class="clear"> </div>
-		</div>
-	</div>
-</div>
-
-<div class="subfooter">
-	<div class="wrap">
-		<ul>
-			<li><a href="index.html">Home</a><span>::</span></li>
-			<li><a href="destinations.html">Destinations</a><span>::</span></li>
-			<li><a href="criuses.html">Cruises</a><span>::</span></li>
-			<li><a href="destinations.html">Specials</a><span>::</span></li>
-			<li><a href="destinations.html">Holidays</a><span>::</span></li>
-			<li><a href="blog.html">Blog</a><span>::</span></li>
-			<li><a href="contact.html">Contact Us</a></li>
-			<div class="clear"> </div>
-		</ul>
-		<p class="copy-right">© 2014 Voyage. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
-		<a class="to-top" href="#info-bar"><span> </span> </a>
-	</div>
-</div>
 <?php include("footer.php"); ?>
