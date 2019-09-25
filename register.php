@@ -1,3 +1,14 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['Confirm_password'])) {
+    if (condition) {
+      // code...
+    }
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -16,22 +27,22 @@
         <form method="post" action="register.php" class="col-md-12 col-lg-12">
           <div class="form-group col-md-6">
             <label for="inputUsername">Username</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="username">
+            <input type="text" name="username" class="form-control" id="inputusername" placeholder="username">
           </div>
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            <input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password">
           </div>
           <div class="form-group col-md-6">
             <label for="inputConfirm_password4">Confirm_password</label>
-            <input type="Confirm_password" class="form-control" id="inputPassword4" placeholder="Password">
+            <input type="Confirm_password" name="Confirm_password" class="form-control" id="inputPassword4" placeholder="Password">
           </div>
 
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
         </form>
       </div>
     </div>
