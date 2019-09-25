@@ -67,14 +67,13 @@
 <section id="form-bar" class="p-2">
 	<div class="d-flex justify-content-around">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12 col-md-8">.col-12 .col-md-8</div>
-				<div class="col-6 col-md-4">.col-6 .col-md-4</div>
-				<span class="text1">find your</span><br>
-				<span class="text2">holydays</span>
+			<div class="row find-holidays">
+				<span class="text1">find your</span>
+				<span class="text2">&nbsp;holydays</span>
 			</div>
-			<div class="col-12 col-md-9">
-				<form class="form-inline"> <span class="mr-2">where</span>
+			<div class="row find-holidays">
+				<form class="form-inline">
+					<span class="mr-2">where</span>
 					<input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
 					<span class="mr-2">when</span>
 					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
