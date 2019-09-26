@@ -1,13 +1,4 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['Confirm_password'])) {
-    if (condition) {
-      // code...
-    }
-  }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -24,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <h1>Rejoinez nous !</h1>
           <p>Je m'enregistre si je n'ai pas de compte !</p>
         </div>
-        <form method="post" action="register.php" class="col-md-12 col-lg-12">
+        <form method="post" action="function_register.php" class="col-md-12 col-lg-12">
           <div class="form-group col-md-6">
             <label for="inputUsername">Username</label>
             <input type="text" name="username" class="form-control" id="inputusername" placeholder="username">
