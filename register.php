@@ -1,13 +1,4 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['Confirm_password'])) {
-    if (condition) {
-      // code...
-    }
-  }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -24,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <h1>Rejoinez nous !</h1>
           <p>Je m'enregistre si je n'ai pas de compte !</p>
         </div>
-        <form method="post" action="register.php" class="col-md-12 col-lg-12">
+        <form method="post" action="function_register.php" class="col-md-12 col-lg-12">
           <div class="form-group col-md-6">
             <label for="inputUsername">Username</label>
             <input type="text" name="username" class="form-control" id="inputusername" placeholder="username">
@@ -39,12 +30,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <div class="form-group col-md-6">
             <label for="inputConfirm_password4">Confirm_password</label>
-            <input type="Confirm_password" name="Confirm_password" class="form-control" id="inputPassword4" placeholder="Password">
+            <input type="password" name="confirm_password" class="form-control" id="inputPassword4" placeholder="Password">
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
         </form>
       </div>
+    </div>
+    <div class="read">
+      <?php
+        if(isset($success)){
+          echo "<p>". $success."</p>";
+        }
+       ?>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
