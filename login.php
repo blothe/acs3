@@ -6,26 +6,29 @@
     <title></title>
   </head>
   <body>
-    <div class="login container ">
-      <form>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    <div class="login container rounded border border-info">
+      <div class="log_form d-flex justify-content-center">
+        <form method="post" action="function_login.php">
+          <div class="form-group">
+            <label for="inputUsername">Username</label>
+            <input type="text" name="username" class="form-control" id="inputusername" placeholder="username">
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          <div class="form-group">
+            <label for="inputEmail4">Email</label>
+            <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
           </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+          <div class="form-group">
+            <label for="inputPassword4">Password</label>
+            <input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password">
           </div>
-        </div>
-      </form>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
     </div>
   </body>
 </html>
