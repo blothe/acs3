@@ -30,12 +30,20 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputConfirm_password4">Confirm_password</label>
-            <input type="Confirm_password" name="Confirm_password" class="form-control" id="inputPassword4" placeholder="Password">
+            <input type="password" name="confirm_password" class="form-control" id="inputPassword4" placeholder="Password">
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
         </form>
       </div>
+    </div>
+    <div class="read">
+      <?php
+        if(isset($success)){
+          echo "<p>". $success."</p>";
+        }
+       ?>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
