@@ -25,7 +25,7 @@
     <div class="container p-2">
       <span class="mr-5"><i class="fas fa-user mr-2"></i> Agent Login</span>
       <span class="mr-5"><i class="fas fa-user mr-2"></i> Member Login</span>
-      <span class="mr-5"><i class="far fa-file mr-2"></i> Not a member? <a class="reg" href="#"> Register</a></span>
+      <span class="mr-5"><i class="far fa-file mr-2"></i> Not a member? <a class="reg" href="register.php"> Register</a></span>
       <span>Call Us Now :815-123-4567</span>
       <a href="#" class="fab fa-facebook-f"></a>
       <a href="#" class="fab fa-twitter"></a>
