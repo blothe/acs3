@@ -53,11 +53,32 @@ session_start();
     {
       exit("Erreur : impossible de copier le fichier dans $content_dir");
     }
-    // enregistrement si toutes les conditions sont OK
-    echo "Article enregistré !";
+    // si tous les tests sont OK >> validation données
+    $article_author = htmlspecialchars($_POST['auteur']);
+    $article_title = htmlspecialchars($_POST['titre']);
+    $article_pic = htmlspecialchars($content_dir . $name_file);
+    $article_content = htmlspecialchars($_POST['texte']);
+    // identification bdd
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "mcs_sbj";
+    // connexion à la bdd + enregistrement des données
+    try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $sql = "INSERT INTO article (article_author, article_title, article_datetime, article_pic, article_content)
+      VALUES ('$article_author', '$article_title', NOW(), '$article_pic', '$article_content')";
+      $conn->exec($sql);
+      echo "Article enregistré !";
+    }
+    catch(PDOException $e)
+    {
+      echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = null;
   }
   ?>
-
 </body>
 </html>
 
