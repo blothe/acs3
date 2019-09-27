@@ -10,8 +10,9 @@
 
   <link rel="icon" type="image/png" href="img/development.png">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
+
 
   <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/  analytics.js"></script> -->
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
