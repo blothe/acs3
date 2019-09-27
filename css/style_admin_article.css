@@ -1,11 +1,10 @@
 .card {
-  width: 20%;
   height: 20%;
   border-color: #b2bec3;
   margin-left: 1rem;
+  margin-top: 1rem;
 }
 .but {
-  padding: ;
   background: #2d3436;
   text-decoration: none;
   border: none;
@@ -27,6 +26,7 @@
 
   font-size: 50px;
 }
+
 
 /* Style the navigation bar */
 .navbar {
@@ -61,4 +61,8 @@
     float: none;
     display: block;
   }
+}
+
+.collapse {
+  transition: 2s;
 }
