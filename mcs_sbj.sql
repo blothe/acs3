@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 25 sep. 2019 à 14:10
+-- Généré le :  Dim 29 sep. 2019 à 14:23
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -37,14 +37,23 @@ CREATE TABLE IF NOT EXISTS `article` (
   `article_pic` varchar(255) DEFAULT NULL,
   `article_content` text,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `article`
 --
 
 INSERT INTO `article` (`ID`, `article_author`, `article_title`, `article_datetime`, `article_pic`, `article_content`) VALUES
-(1, 'John Doe', 'Article Test', NULL, NULL, NULL);
+(1, 'Baptiste', 'Test', '2019-09-27 20:09:01', 'uploads/hello.jpg', 'enregistrement bdd #1'),
+(2, 'Baptiste', 'Test', '2019-09-29 14:37:54', 'uploads/hello.jpg', 'enregistrement bdd #2'),
+(3, 'Baptiste', 'Test', '2019-09-29 14:38:26', 'uploads/hello.jpg', 'enregistrement bdd #3'),
+(4, 'Baptiste', 'Test', '2019-09-29 14:39:45', 'uploads/hello.jpg', 'enregistrement bdd #4'),
+(5, 'Baptiste', 'Test', '2019-09-29 14:39:59', 'uploads/hello.jpg', 'enregistrement bdd #5'),
+(6, 'Baptiste', 'Test', '2019-09-29 14:40:18', 'uploads/hello.jpg', 'enregistrement bdd #6'),
+(7, 'Baptiste', 'Test', '2019-09-29 14:40:32', 'uploads/hello.jpg', 'enregistrement bdd #7'),
+(8, 'Baptiste', 'Test', '2019-09-29 14:40:47', 'uploads/hello.jpg', 'enregistrement bdd #8'),
+(9, 'Baptiste', 'Test', '2019-09-29 14:41:05', 'uploads/hello.jpg', 'enregistrement bdd #9'),
+(10, 'ROOT', 'BONJOUR', '2019-09-29 16:16:39', 'uploads/root.jpg', 'JE S\'APPELLE ROOT');
 
 -- --------------------------------------------------------
 
