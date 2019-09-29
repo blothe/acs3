@@ -9,12 +9,12 @@ $dbname = "mcs_sbj";
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $conn->query("SELECT `article_pic` AS `illustration`, `article_title` AS `titre`, `article_author` AS `auteur`, DATE_FORMAT(`article_datetime`, 'le %d/%m/%Y à %Hh%i') AS `publication` FROM `article` ORDER BY `ID` DESC LIMIT 10");
+  $stmt = $conn->query("SELECT `ID`, `article_pic` AS `illustration`, `article_title` AS `titre`, `article_author` AS `auteur`, DATE_FORMAT(`article_datetime`, 'le %d/%m/%Y à %Hh%i') AS `publication` FROM `article` ORDER BY `ID` DESC LIMIT 10");
   while ($result = $stmt->fetch()) {
 
     ?>
 
-    <li onclick="location.href='#';" style="width: 240.4px; float: left; display: block;">
+    <li onclick="location.href='article_one_page.php?id=<?php echo $result['ID']; ?>';" style="width: 240.4px; float: left; display: block;">
       <img src="<?php echo $result['illustration'] ?>">
       <div class="caption-info">
         <div class="caption-info-head">
