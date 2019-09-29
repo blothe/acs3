@@ -8,16 +8,10 @@
   <title>Voyages</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="img/development.png">
-<<<<<<< HEAD
-
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
-
-
-=======
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
->>>>>>> 8c0460cc580eb0338d9c40b4e264986bd6b5639a
   <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/  analytics.js"></script> -->
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <script src="js/jquery.min.js"></script>
