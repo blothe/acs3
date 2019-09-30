@@ -67,14 +67,14 @@ session_start();
     try {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $sql = "INSERT INTO article (article_author, article_title, article_datetime, article_pic, article_content)
-      VALUES ('$article_author', '$article_title', NOW(), '$article_pic', '$article_content')";
-      $conn->exec($sql);
+      $stmt = "INSERT INTO article (article_author, article_title, article_datetime, article_pic, article_content)
+      VALUES (\"$article_author\", \"$article_title\", NOW(), \"$article_pic\", \"$article_content\")";
+      $conn->exec($stmt);
       echo "Article enregistré !";
     }
     catch(PDOException $e)
     {
-      echo $sql . "<br>" . $e->getMessage();
+      echo $stmt . "<br>" . $e->getMessage();
     }
     $conn = null;
   }
