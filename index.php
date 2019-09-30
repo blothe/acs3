@@ -39,6 +39,7 @@
 	<div class="offers-head">
 		<h3>Special Offers</h3>
 		<p>Best 2014 packages where people love to stay!</p>
+		<button type="button" name="button" onclick="location.href='article_new_post.php'">Créer un article</button>
 	</div>
 	<script defer="" src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript">

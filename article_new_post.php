@@ -27,7 +27,7 @@ session_start();
     <label for="texte"><p><strong>Texte :</strong></p></label>
     <p><textarea name="texte" id="texte" rows="10" cols="100"></textarea></p>
     <!-- publication -->
-    <p><input type="submit" name="submit" value="Publier"></p>
+    <p><input type="submit" name="submit" value="Publier" onclick="location.href='index.php'"></p>
   </form>
 </body>
 </html>
