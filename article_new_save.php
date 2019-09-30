@@ -4,13 +4,7 @@ session_start();
 
 <?php include("header.php"); ?>
 
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Admin</title>
-</head>
-<body>
+<section class="admin_article_new">
   <?php
   // suite soumission du formulaire
   if (isset($_POST['submit']))
@@ -18,17 +12,32 @@ session_start();
     // vérification du nom de l'auteur (OK si renseigné et non nul)
     if (!isset($_POST['auteur']) OR $_POST['auteur'] == "")
     {
-      exit("Erreur : veuillez renseigner le nom de l'auteur.");
+      exit("<h1>OUPS !</h1>
+      <div id=\"erreur\">
+      <p>Erreur : veuillez renseigner le nom de l'auteur.</p>
+      <a href=\"article_new_post.php\"><p>Recommencer ?</p></a>
+      </div>
+      </section>");
     }
     // vérification titre de l'article (OK si renseigné et non nul)
     if (!isset($_POST['titre']) OR $_POST['titre'] == "")
     {
-      exit("Erreur : veuillez renseigner le titre de l'article.");
+      exit("<h1>OUPS !</h1>
+      <div id=\"erreur\">
+      <p>Erreur : veuillez renseigner le titre de l'article.</p>
+      <a href=\"article_new_post.php\"><p>Recommencer ?</p></a>
+      </div>
+      </section>");
     }
     // vérification texte de l'article (OK si renseigné et non nul)
     if (!isset($_POST['texte']) OR $_POST['texte'] == "")
     {
-      exit("Erreur : veuillez renseigner le texte de l'article.");
+      exit("<h1>OUPS !</h1>
+      <div id=\"erreur\">
+      <p>Erreur : veuillez renseigner le texte de l'article.</p>
+      <a href=\"article_new_post.php\"><p>Recommencer ?</p></a>
+      </div>
+      </section>");
     }
     // vérification de l'image d'illustration : plusieurs étapes...
     $content_dir = 'uploads/'; // ... dossier pour l'enregistrement
@@ -37,21 +46,36 @@ session_start();
     $tmp_file = $_FILES['illustration']['tmp_name'];
     if (!is_uploaded_file($tmp_file))
     {
-      exit("Erreur : illustration requise.");
+      exit("<h1>OUPS !</h1>
+      <div id=\"erreur\">
+      <p>Erreur : illustration requise.</p>
+      <a href=\"article_new_post.php\"><p>Recommencer ?</p></a>
+      </div>
+      </section>");
     }
     /* ... vérification de l'extension
     >> OK si fichier est bien de type image reconnu */
     $type_file = $_FILES['illustration']['type'];
-    if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') )
+    if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') && !strstr($type_file, 'png') )
     {
-      exit("Erreur : le fichier chargé doit être une image (formats acceptés : JPG, JPEG, BMP, GIF).");
+      exit("<h1>OUPS !</h1>
+      <div id=\"erreur\">
+      <p>Erreur : le fichier chargé doit être une image (formats acceptés : JPG, JPEG, BMP, GIF, PNG).</p>
+      <a href=\"article_new_post.php\"><p>Recommencer ?</p></a>
+      </div>
+      </section>");
     }
     /* ... vérification de l'enregistrement
     >> OK si fichier déplacé >> dossier destination */
     $name_file = $_FILES['illustration']['name'];
     if( !move_uploaded_file($tmp_file, $content_dir . $name_file) )
     {
-      exit("Erreur : impossible de copier le fichier dans $content_dir");
+      exit("<h1>OUPS !</h1>
+      <div id=\"erreur\">
+      <p>Erreur : impossible de copier le fichier dans $content_dir</p>
+      <a href=\"article_new_post.php\"><p>Recommencer ?</p></a>
+      </div>
+      </section>");
     }
     // si tous les tests sont OK >> validation données
     $article_author = htmlspecialchars($_POST['auteur']);
@@ -70,7 +94,11 @@ session_start();
       $stmt = "INSERT INTO article (article_author, article_title, article_datetime, article_pic, article_content)
       VALUES (\"$article_author\", \"$article_title\", NOW(), \"$article_pic\", \"$article_content\")";
       $conn->exec($stmt);
-      echo "Article enregistré !";
+      echo "<h1>ARTICLE ENREGISTRÉ</h1>
+      <div id=\"enregistrement\">
+      <p>Vous pouvez à présent consulter votre publication.</p>
+      <a href=\"index.php\"><p>Retour au menu principal ?</p></a>
+      </div>";
     }
     catch(PDOException $e)
     {
@@ -79,7 +107,6 @@ session_start();
     $conn = null;
   }
   ?>
-</body>
-</html>
+</section>
 
 <?php include("footer.php"); ?>
